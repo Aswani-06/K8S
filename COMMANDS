@@ -1,0 +1,31 @@
+kubectl get pods / pod / po :-To see list of pods
+kubectl run pod-1 --image=nginx  :- To create pod ("imperative way to create pod")
+
+kubectl api-resources :-To see the list of Resources
+
+vim flm.yml
+
+---
+apiVersion: v1  ("V" should be capital letter")
+kind: Pod  ("p" should be capital letter")
+metadata:
+  name: mypod
+spec:
+ containers:
+   - name: cont1
+     image: shaikmustafa/dm
+     ports:
+      - containerPort: 80   ("p" should be capital letter")
+
+kubectl create -f flm.yml :- To execute manifest file   ("-f" means file name)
+kubectl get po pod-4 :- To check perticular pod
+kubectl get pod -o wide :- To get more information about pod
+kubectl get pod -o yml :- To get all pod information in yaml format
+kubectl get pod -o json :- To get all pod information in json format
+
+kubectl describe pod pod1 :- To get full information about pod1
+kubectl delete pod pod1 :- to delete single pod
+kubectl delete pod -all :-To delete all pods
+
+
+
