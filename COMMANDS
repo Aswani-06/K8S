@@ -3,8 +3,8 @@ kubectl run pod-1 --image=nginx  :- To create pod ("imperative way to create pod
 
 kubectl api-resources :-To see the list of Resources
 
-vim flm.yml
 
+vim flm.yml   ("Declarative way to create pod")
 ---
 apiVersion: v1  ("V" should be capital letter")
 kind: Pod  ("p" should be capital letter")
